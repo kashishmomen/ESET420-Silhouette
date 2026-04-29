@@ -296,7 +296,7 @@ class DashboardScreen(Screen):
 
     # ---------- TIME ----------
     def update_time(self, dt):
-        now = datetime.now(APP_TZ).strftime("%I:%M:%S %p").lstrip("0")
+        now = datetime.now(APP_TZ).strftime("%I:%M:%S.f %p").lstrip("0")
         self.time_label.text = f"Current Time: {now}"
 
     def on_enter(self, *args):
@@ -417,7 +417,7 @@ class DashboardScreen(Screen):
                     if self._ts_offset is not None:
                         dt = dt + self._ts_offset
 
-                    t = dt.strftime("%I:%M:%S %p").lstrip("0")
+                    t = dt.strftime("%I:%M:%S.f %p").rstrip("0").rstrip(".").lstrip("0").lstrip("0")
 
                     dmg = damage_for_zone(zone)
                     self.health = max(0, self.health - dmg)
