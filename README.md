@@ -1,7 +1,7 @@
 These files pertain to Silhouette's TrueShot Systems, which a smart target shooting system. 
 
 
-The main.cpp file is for establishing WiFi connection to the ESP32 microcontroller, along with moving the stepper motor as necessary (i.e. knockdown). 
+The main.cpp file (espserver >> src) is for establishing WiFi connection to the ESP32 microcontroller, along with moving the stepper motor as necessary (i.e. knockdown). 
 
 
 WiFi Name: ESP32_Server
