@@ -1,0 +1,39 @@
+curl -X POST http://127.0.0.1:5050/reset
+
+curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"HEAD","adc":3000}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"CHEST","adc":2100}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"LEFT_ARM","adc":1700}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"RIGHT_ARM","adc":1750}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"LEFT_LEG","adc":1600}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"RIGHT_LEG","adc":1650}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"HIPS","adc":2200}'
+
+  curl -X POST http://127.0.0.1:5050/hit \
+  -H "Content-Type: application/json" \
+  -d '{"zone":"HEART","adc":2900}'
+
+
+
+  // simulate hit on esp
+
+  curl -X POST "http://192.168.4.1/hit?zone=CHEST&adc=2100"
